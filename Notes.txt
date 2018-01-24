@@ -1,0 +1,51 @@
+in pom.xml
+Add following JAR for Spring Boot ==>>
+<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.9.RELEASE</version>
+	</parent>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>1.5.9.RELEASE</version>
+		</dependency>
+	</dependencies>
+	<properties>
+		<java-version>1.8</java-version>
+	</properties>
+	
+
+@SpringAplication ==>> annotation to tell Spring that this  PSVM class to be used as Spring boot application. this is the starting point for the spring boot application 
+
+
+In PSVM==>
+to tell spring to create the servlet container and host the coontainer foollowing static method is used
+SpringApplication.run(CourseApiApp.class, args);
+
+What does this static method SpringApplication.run do?
+-- Setup default configuration
+-- Starts spring application context
+-- perform class path scan
+-- start tomcat server
+
+@RestController ==> to tells that this is the rest controller class
+@Requestmapping ==> to map the url with specific method. By default @Requestmapping annotation maps all HTTP Methods
+
+
+In POM.xml
+the <dependencies> tell which jar to be downloaded by maven 
+the <Parent> of the Spring tell which version of jar to be downloaded by maven in the project
+"Bill of Material" ::: There is a pre-set list of compitable jar (According to the version) when we specific version of the "Spring boot start parent" in pom file.
+
+ **************************
+ Embedded Tomcat server
+ *	convinence
+ *	Servlet container config is now Application config
+ *	Standalone application
+ *	Microservice Architecture
+ 
+ ***************************
+ 
