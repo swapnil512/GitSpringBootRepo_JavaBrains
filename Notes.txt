@@ -48,4 +48,50 @@ the <Parent> of the Spring tell which version of jar to be downloaded by maven i
  *	Microservice Architecture
  
  ***************************
+ Spring boot application can be created by 4 ways:
+ 1. create a maven project and then add the spring dependencies to it.
+ 2. Create a Spring boot project from Spring Initializr : http://start.spring.io/ 
+ 3. Create From Spring CLI : command line interface :https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html
+ 4. Create Directly from the Spring STS IDE
+ **************************************************************
+ Commons application porperties for the configuration of spring boot project
+ https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+ **************************
+ while configuring new spring boot project. Add JPA and Apache derby for data base support
+ Apache Derby, an Apache DB subproject, is an open source relational database implemented entirely in Java and available under the Apache License, Version 2.0.
+Some key advantages include:
+*	Derby has a small footprint -- about 3.5 megabytes for the base engine and embedded JDBC driver.
+*	Derby is based on the Java, JDBC, and SQL standards.
+* 	Derby provides an embedded JDBC driver that lets you embed Derby in any Java-based solution.
+*	Derby also supports the more familiar client/server mode with the Derby Network Client JDBC driver and Derby Network Server.
+*	Derby is easy to install, deploy, and use.
+ ********************************
+ To get the basic CRUD Operation we can extend out DAO interface with "CrudRepository" Interface..
+ For Ex,
+ public interface TopicRepository extends CrudRepository<Topic,String>
+ 
+ *******************************************************************
+ The save method in CrudRepository can be used for both saving a new Object or udpating a existing entry.
+***************************************** 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
