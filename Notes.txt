@@ -70,10 +70,33 @@ Some key advantages include:
  For Ex,
  public interface TopicRepository extends CrudRepository<Topic,String>
  
- *******************************************************************
+*******************************************************************
  The save method in CrudRepository can be used for both saving a new Object or udpating a existing entry.
-***************************************** 
- 
+***************************************************************************
+TO filter and get thhe record from the database Spring provides "Method name " based CRUD operations
+Always write the method name in camel-case.
+For Ex,
+public List<Course> findByName(String name);
+
+********************************************************************************************
+For monitoring of the the production application we can select Actuators as dependencies from Spring Boot starter initializr:
+
+Our Add following in the POM file of the projec::
+<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+    <version>1.5.9.RELEASE</version>
+</dependency>
+**********************************
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Following setting applies only for springboot version 1.5.9.RELEASE and below:
+we can configure the Actuator at different port by folowing :
+management.port=9001
+management.security.enabled=false 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$
+************
+https://spring.io/guides/gs/actuator-service/
  
  
  

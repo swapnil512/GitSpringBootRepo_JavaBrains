@@ -2,6 +2,9 @@ package com.itsme.springBootTutor.course;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+import com.itsme.springBootTutor.topic.Topic;
 
 @Entity
 public class Course {
@@ -10,17 +13,20 @@ public class Course {
 	private String id;
 	private String name;
 	private String description;
+	@ManyToOne
+	private Topic topic;
 	
 	
 	public Course() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Course(String id, String name, String description) {
+	public Course(String id, String name, String description, String topicId) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
+		this.topic = new Topic(topicId, "", "");
 	}
 	public String getId() {
 		return id;
@@ -39,6 +45,12 @@ public class Course {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public Topic getTopic() {
+		return topic;
+	}
+	public void setTopic(Topic topic) {
+		this.topic = topic;
 	}
 	
 }
