@@ -1,8 +1,0 @@
-package com.itsme.springBootTutor.topic;
-
-import org.springframework.stereotype.Service;
-
-@Service
-public class TopicService {
-
-}
